@@ -14,10 +14,10 @@
         .my-circle {
             background-color: #45a99B;
             border-radius: 50%;
-            width: 100px;
-            height: 100px;
-            margin-top: 20px;
-            margin-left: 20px;
+            width: 5px;
+            height: 5px;
+            margin-top: 1px;
+            margin-left: 1px;
         }
 
     </style>
@@ -29,42 +29,7 @@
     
 
     <div class="container">
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
-        <div class="my-circle"></div>
+
     </div>
     
 
@@ -72,8 +37,13 @@
 <script>
 
 const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
-const elements = document.querySelectorAll('.my-circle');
-elements.forEach(element => element.style.backgroundColor=getRandomColor());
+const makeDiv = () => document.createElement('div');
+const container = document.querySelector('.container');
+const circles = Array.from({ length : 100000 }, () => makeDiv());
+circles.forEach(circle => circle.style.backgroundColor=getRandomColor());
+circles.forEach(circle => circle.className='my-circle');
+circles.forEach(circle => container.appendChild(circle));
+
 
 </script>
 
