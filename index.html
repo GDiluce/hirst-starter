@@ -5,11 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .my-circle {
             background-color: #45a99B;
             border-radius: 50%;
             width: 100px;
             height: 100px;
+            margin-top: 20px;
+            margin-left: 20px;
         }
 
     </style>
@@ -22,13 +30,50 @@
 
     <div class="container">
         <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
+        <div class="my-circle"></div>
     </div>
     
 
 
 <script>
 
-
+const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
+const elements = document.querySelectorAll('.my-circle');
+elements.forEach(element => element.style.backgroundColor=getRandomColor());
 
 </script>
 
