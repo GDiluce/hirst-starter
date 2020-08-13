@@ -74,13 +74,15 @@
 const getRandomColor = () => `#${Math.floor(Math.random()*16777215).toString(16)}`; 
 const elements = document.querySelectorAll('.my-circle');
 console.log(elements);
+console.log(Array.isArray(elements));
 const myArray = Array.from(elements);
 console.log(myArray);
-console.log(Array.isArray(elements));
 console.log(Array.isArray(myArray));
-console.log(typeof elements);
-
 elements.forEach(element => element.style.backgroundColor=getRandomColor());
+
+const newArray = Array.from({ length: 100 });
+console.log(newArray);
+
 
 </script>
 
